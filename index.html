@@ -2,496 +2,152 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <title>Sytrex – Landing Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sytrex - Socials</title>
-    <link rel="icon" href="avatar.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="avatar.png" sizes="64x64" type="image/png" />
-    <link rel="apple-touch-icon" href="avatar.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="avatar.png" />
     <meta
       name="description"
-      content="Sytrex – Minecraft Spieler & Content Creator. YouTube, Twitch, Discord und eigener Minecraft Server."
+      content="Sytrex – Ihre moderne Landing Page für innovative Projekte und professionelle Dienstleistungen."
     />
-    <meta property="og:title" content="Sytrex – Minecraft & Content Creator" />
-    <meta
-      property="og:description"
-      content="Sytrex – Minecraft Spieler & Content Creator. YouTube, Twitch, Discord & eigener Minecraft Server."
-    />
-    <meta
-      property="og:image"
-      content="https://zeroxd05.github.io/socials//avatar.png"
-    />
-    <meta property="og:url" content="https://zeroxd05.github.io/socials/" />
-    <meta property="og:type" content="website" />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Press Start 2P", cursive;
-        min-height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-      }
-
-      .background-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-
-      .background-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        mask-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0.8) 50%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        -webkit-mask-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0.8) 50%,
-          rgba(0, 0, 0, 0) 100%
-        );
-      }
-
-      .background-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          rgba(34, 139, 34, 0.3),
-          rgba(101, 67, 33, 0.5)
-        );
-      }
-
-      .container {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .profile {
-        text-align: center;
-        margin-bottom: 40px;
-        animation: slideDown 0.6s ease-out;
-      }
-
-      .avatar {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 20px;
-        border: 6px solid #8b4513;
-        image-rendering: pixelated;
-        background: #654321;
-        box-shadow: 0 8px 0 #5a3a1f, 0 8px 20px rgba(0, 0, 0, 0.5);
-      }
-
-      .avatar img {
-        width: 100%;
-        height: 100%;
-        image-rendering: pixelated;
-      }
-
-      .username {
-        font-size: 24px;
-        color: #fff;
-        text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8),
-          0 0 20px rgba(255, 255, 255, 0.3);
-        margin-bottom: 15px;
-      }
-
-      .bio {
-        font-size: 10px;
-        color: #d4d4d4;
-        line-height: 1.6;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
-      }
-
-      .links {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .link-button {
-        background: linear-gradient(180deg, #7a7a7a 0%, #5a5a5a 100%);
-        border: 4px solid #000;
-        border-bottom-width: 6px;
-        border-right-width: 6px;
-        padding: 20px 30px;
-        text-decoration: none;
-        color: #fff;
-        font-size: 12px;
-        text-align: center;
-        transition: all 0.1s;
-        cursor: pointer;
-        position: relative;
-        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4),
-          inset 0 2px 0 rgba(255, 255, 255, 0.2),
-          inset 0 -2px 0 rgba(0, 0, 0, 0.3);
-        animation: slideUp 0.5s ease-out backwards;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
-        border-radius: 20px;
-      }
-
-      .link-button:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .link-button:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .link-button:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .link-button:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .link-button:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-      .link-button:nth-child(6) {
-        animation-delay: 0.6s;
-      }
-
-      .link-button:hover {
-        transform: translateY(2px);
-        border-bottom-width: 4px;
-        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4),
-          inset 0 2px 0 rgba(255, 255, 255, 0.2),
-          inset 0 -2px 0 rgba(0, 0, 0, 0.3);
-        background: linear-gradient(180deg, #8a8a8a 0%, #6a6a6a 100%);
-      }
-
-      .link-button:active {
-        transform: translateY(4px);
-        border-bottom-width: 2px;
-        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(0, 0, 0, 0.3);
-      }
-
-      .link-button.youtube {
-        background: linear-gradient(180deg, #ff0000 0%, #cc0000 100%);
-      }
-
-      .link-button.youtube:hover {
-        background: linear-gradient(180deg, #ff3333 0%, #dd0000 100%);
-      }
-
-      .link-button.twitch {
-        background: linear-gradient(180deg, #9146ff 0%, #7730dd 100%);
-      }
-
-      .link-button.twitch:hover {
-        background: linear-gradient(180deg, #a469ff 0%, #8843ee 100%);
-      }
-
-      .link-button.discord {
-        background: linear-gradient(180deg, #5865f2 0%, #4752c4 100%);
-      }
-
-      .link-button.discord:hover {
-        background: linear-gradient(180deg, #6b7aff 0%, #5865f2 100%);
-      }
-
-      .link-button.instagram {
-        background: linear-gradient(180deg, #e1306c 0%, #c13584 100%);
-      }
-
-      .link-button.instagram:hover {
-        background: linear-gradient(180deg, #e84d81 0%, #d1449a 100%);
-      }
-
-      .link-button.twitter {
-        background: linear-gradient(180deg, #1da1f2 0%, #0c85d0 100%);
-      }
-
-      .link-button.twitter:hover {
-        background: linear-gradient(180deg, #3db3ff 0%, #1da1f2 100%);
-      }
-
-      @keyframes slideDown {
-        from {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      .footer {
-        margin-top: 60px;
-        padding: 20px;
-        text-align: center;
-        font-size: 8px;
-        color: #ccc;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
-        opacity: 0.8;
-      }
-
-      .upload-hint {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.6);
-        border: 4px solid #8b4513;
-        font-size: 8px;
-        color: #d4d4d4;
-        line-height: 1.8;
-      }
-
-      .stats-container {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        margin-top: 30px;
-        flex-wrap: wrap;
-      }
-
-      .stat-box {
-        background: rgba(0, 0, 0, 0.8);
-        border: 4px solid #8b4513;
-        padding: 15px 25px;
-        min-width: 200px;
-        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4),
-          inset 0 2px 0 rgba(139, 69, 19, 0.3);
-      }
-
-      .stat-label {
-        font-size: 8px;
-        color: #aaa;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-      }
-
-      .stat-value {
-        font-size: 16px;
-        color: #55ff55;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8),
-          0 0 10px rgba(85, 255, 85, 0.5);
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      .stat-icon {
-        margin-right: 8px;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.7;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          padding: 30px 15px;
-        }
-
-        .username {
-          font-size: 18px;
-        }
-
-        .bio {
-          font-size: 8px;
-        }
-
-        .link-button {
-          font-size: 10px;
-          padding: 18px 25px;
-        }
-
-        .avatar {
-          width: 100px;
-          height: 100px;
-        }
-
-        .stat-box {
-          min-width: 150px;
-          padding: 12px 20px;
-        }
-
-        .stat-value {
-          font-size: 14px;
-        }
-
-        .stat-label {
-          font-size: 7px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .username {
-          font-size: 14px;
-        }
-
-        .bio {
-          font-size: 7px;
-        }
-
-        .link-button {
-          font-size: 9px;
-          padding: 15px 20px;
-        }
-
-        .stat-box {
-          min-width: 130px;
-          padding: 10px 15px;
-        }
-
-        .stat-value {
-          font-size: 12px;
-        }
-
-        .stat-label {
-          font-size: 6px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="background-container">
-      <img class="background-image" id="bgImage" src="background.png " />
-      <div class="background-overlay"></div>
+    <header class="navbar">
+      <a href="#" class="logo-link">
+        <img src="avatar.png" alt="Logo" class="logo-icon" />
+        Sytrex
+      </a>
+      <nav class="nav-links">
+        <a href="#projects">Projekte</a>
+        <a class="contact-btn" href="#contact">Kontakt</a>
+      </nav>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#projects">Projekte</a>
+      <a class="mobile-contact" href="#">Kontakt</a>
     </div>
 
-    <div class="container">
-      <div class="profile">
-        <div class="avatar">
+    <main class="hero">
+      <section class="hero-text fade">
+        <span class="badge">Minecraft und Content Creator</span>
+        <h1>Hey, ich bin <span>Sytrex</span></h1>
+        <p>
+          19 Jahre alt · Schweiz 🇨🇭
+          <br />
+          Ich entwickle Minecraft-Server mit Java und erstelle Content auf
+          YouTube & Twitch.
+        </p>
+
+        <div class="buttons">
+          <a class="btn youtube" href="#">
+            <img
+              style="width: 24px; height: 24px"
+              src="youtube.svg"
+              alt="youtube svg"
+            />
+          </a>
+          <a class="btn twitch" href="#">
+            <img
+              style="width: 24px; height: 24px"
+              src="twitch.svg"
+              alt="twitch svg"
+            />
+          </a>
+
+          <a class="btn discord" href="#">
+            <img
+              style="width: 24px; height: 24px"
+              src="discord.svg"
+              alt="discord svg"
+            />
+          </a>
+        </div>
+
+        <div class="status">
+          <span class="dot"></span> Aktiv auf mehreren Plattformen
+        </div>
+      </section>
+      <section class="hero-card fade">
+        <div class="card">
           <img src="avatar.png" alt="Avatar" />
+          <div class="card-glow"></div>
         </div>
-        <h1 class="username">Sytrex</h1>
-        <p class="bio">Minecraft Spieler & Content Creator</p>
-      </div>
+      </section>
+    </main>
+    <div class="divider"></div>
 
-      <div class="links">
-        <a href="#" class="link-button youtube">YouTube</a>
-        <a href="#" class="link-button twitch">Twitch</a>
-        <a href="#" class="link-button discord">Discord</a>
-        <a href="#" class="link-button instagram">Instagram</a>
-        <a href="#" class="link-button twitter">Twitter</a>
-        <a href="#" class="link-button">Webseite</a>
-      </div>
+    <section class="projects section fade" id="projects">
+      <h2>Projekte</h2>
+      <p>Ein paar Dinge, an denen ich gearbeitet habe</p>
 
-      <div class="stats-container">
-        <div class="stat-box">
-          <div class="stat-label">
-            <span class="stat-icon">💬</span>Discord Members
+      <div class="project-grid">
+        <div class="project-card modern horizontal">
+          <!-- Projekt Icon -->
+          <div class="project-icon">
+            <img src="avatar.png" alt="Minecraft Avatar" />
           </div>
-          <div class="stat-value" id="discordMembers">Lädt...</div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-label">
-            <span class="stat-icon">⛏️</span>Sytrex.net
+          <!-- Projekt Content -->
+          <div class="project-content">
+            <h3>Minecraft Server</h3>
+            <p>Custom Java Plugin für Multiplayer Server</p>
+            <div class="project-tags modern-tags">
+              <span>Minecraft</span> <span>Community</span> <span>Java</span
+              ><span>Bedrock</span>
+            </div>
           </div>
-          <div class="stat-value" id="minecraftPlayers">Lädt...</div>
+        </div>
+        <div class="project-card modern horizontal">
+          <!-- Projekt Icon -->
+          <div class="project-icon">
+            <img src="background.png" alt="Minecraft Avatar" />
+          </div>
+          <!-- Projekt Content -->
+          <div class="project-content">
+            <h3>Discord Server</h3>
+            <p>Aktive Community</p>
+            <div class="project-tags modern-tags">
+              <span>Minecraft</span> <span>Community</span> <span>Aktiv</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <footer class="footer">made with ❤️ by zero269</footer>
+    </section>
+    <div class="divider"></div>
+    <section class="contact section fade" id="contact">
+      <div class="contact-wrapper">
+        <!-- Dein Avatar -->
+        <div class="contact-avatar">
+          <img src="avatar.png" alt="Sytrex Avatar" />
+        </div>
 
-    <script>
-      const CONFIG = {
-        discordServerId: "1234961685651918888",
+        <h2>Kontakt</h2>
+        <p class="thank-you-text">
+          Danke, dass du meine Website besucht hast! 💜<br />
+          Bei Fragen, Projektideen oder einfach nur zum Quatschen – meld dich
+          gerne!
+        </p>
 
-        minecraftServerIp: "sytrex.net",
+        <!-- Impressum direkt als Text -->
+        <div class="impressum">
+          <h3>Impressum</h3>
+          <p>
+            Ricardo Martins<br />
+            c/o F2BII E-Commerce #121<br />
+            Hintergoldingerstrasse 30<br />
+            8638 Goldingen
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">© 2026 Made with <3 by zero269</footer>
+    <button id="backToTop" title="Nach oben">↑</button>
 
-        updateInterval: 30000,
-      };
-
-      async function updateDiscordCount() {
-        try {
-          const response = await fetch(
-            `https://discord.com/api/v10/invites/${CONFIG.discordServerId}?with_counts=true`
-          );
-
-          if (!response.ok) {
-            const widgetResponse = await fetch(
-              `https://discord.com/api/guilds/${CONFIG.discordServerId}/widget.json`
-            );
-            if (widgetResponse.ok) {
-              const data = await widgetResponse.json();
-              document.getElementById("discordMembers").textContent =
-                data.presence_count ? `${data.presence_count} Online` : "N/A";
-              return;
-            }
-            throw new Error("Discord API Fehler");
-          }
-
-          const data = await response.json();
-          const memberCount =
-            data.approximate_member_count || data.members || "N/A";
-          document.getElementById("discordMembers").textContent = memberCount;
-        } catch (error) {
-          console.error("Discord Count Error:", error);
-          document.getElementById("discordMembers").textContent = "1,234";
-        }
-      }
-
-      async function updateMinecraftCount() {
-        try {
-          const response = await fetch(
-            `https://api.mcsrvstat.us/3/${CONFIG.minecraftServerIp}`
-          );
-
-          if (!response.ok) throw new Error("Minecraft API Fehler");
-
-          const data = await response.json();
-
-          if (data.online) {
-            const players = data.players.online || 0;
-            const maxPlayers = data.players.max || 0;
-            document.getElementById(
-              "minecraftPlayers"
-            ).textContent = `${players}/${maxPlayers}`;
-          } else {
-            document.getElementById("minecraftPlayers").textContent = "Offline";
-          }
-        } catch (error) {
-          console.error("Minecraft Count Error:", error);
-          document.getElementById("minecraftPlayers").textContent = "12/100";
-        }
-      }
-
-      function updateAllStats() {
-        updateDiscordCount();
-        updateMinecraftCount();
-      }
-
-      updateAllStats();
-
-      setInterval(updateAllStats, CONFIG.updateInterval);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
